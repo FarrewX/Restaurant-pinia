@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import info from '../components/info.vue'
-
+import axios from 'axios'
 
 
 const router = createRouter({
@@ -18,7 +18,7 @@ const router = createRouter({
       component: () => import('../views/CartView.vue')
     },
     {
-      path: '/info/:id',
+      path: '/info/undefined/:id',
       name: 'info',
       component: info
     },

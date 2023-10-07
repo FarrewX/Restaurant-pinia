@@ -10,7 +10,7 @@ const product = useProductList()
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="card" style="margin-left: 30px; margin: auto; padding: auto;" v-for="(item, index) in product.products" :key="index">
         <RouterLink :to="{ name: 'info', params:{id:index} }">
-          <img :src="item.imageUrl" alt="Product Image">
+          <img :src="item.imageUrl" alt="">
         </RouterLink>
         <p style="font-size: 20px;">{{ item.title }}</p>
         <p style="font-size: 16px;">price : {{ item.price }} บาท.</p>
@@ -26,7 +26,7 @@ body {
 }
 
 img{
-  width: 250px;
+  width: auto;
   height: 200px;
 }
 .card {
